@@ -24,3 +24,13 @@ function convert (input) {
 
     }
 }
+
+for (let i = 2; i < process.argv.length; i++) {
+    input.push(process.argv[i]);
+}
+
+convert(input);
+for (let i = 0; i < resultArray.length - 1; i++) {
+    resultString = resultString + resultArray[i] + ",";
+}
+console.log( resultString + resultArray[resultArray.length - 1])
